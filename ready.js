@@ -5,7 +5,7 @@
   if (typeof module != 'undefined') module.exports = definition()
   else if (typeof define == 'function' && typeof define.amd == 'object') define(definition)
   else context[name] = definition()
-}('domready', this, function (ready) {
+}('domready', this || window, function (ready) {
 
   var fns = [], fn, f = false
     , doc = document
